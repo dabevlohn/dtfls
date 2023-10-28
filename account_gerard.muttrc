@@ -1,0 +1,23 @@
+unmailboxes *
+set my_user="g...l@outlook.com"
+set my_pass=`pass show g...l`
+set from=$my_user
+set envelope_from=yes
+set imap_user=$my_user
+set imap_pass=$my_pass
+set folder="imap://localhost:1143"
+set record= +Sent
+set postponed= +Drafts
+set spoolfile= +INBOX
+
+mailboxes = +INBOX +Sent
+set imap_check_subscribed
+
+set smtp_url = smtp://$my_user:$my_pass@localhost:1025
+
+set ssl_starttls = no
+set ssl_force_tls = no
+#set ssl_use_tlsv1 = no
+#set ssl_use_sslv3 = no
+set ssl_verify_host = no
+set ssl_verify_dates = no
